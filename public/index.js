@@ -2,10 +2,10 @@ let transactions = [];
 let myChart;
 
 fetch("/api/transaction")
-  .then((response) => {
+  .then(response => {
     return response.json();
   })
-  .then((data) => {
+  .then(data => {
     // save db data on global variable
     transactions = data;
 
@@ -28,7 +28,7 @@ function populateTable() {
   let tbody = document.querySelector("#tbody");
   tbody.innerHTML = "";
 
-  transactions.forEach((transaction) => {
+  transactions.forEach(transaction => {
     // create and populate a table row
     let tr = document.createElement("tr");
     tr.innerHTML = `
@@ -122,10 +122,10 @@ function sendTransaction(isAdding) {
       "Content-Type": "application/json",
     },
   })
-    .then((response) => {
+    .then(response => {
       return response.json();
     })
-    .then((data) => {
+    .then(data => {
       if (data.errors) {
         errorEl.textContent = "Missing Information";
       } else {
