@@ -28,5 +28,3 @@ app.use(require("./routes/api.js"));
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
-
-// mongodb+srv://Jesus-admin:1likePandas^w^@cluster0.ghkzi.mongodb.net/budgetdb?retryWrites=true&w=majority
